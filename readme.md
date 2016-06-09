@@ -21,7 +21,7 @@ Modify global page settings in `user/site.json`
 
 Launch the application using the built-in webserver
 
-   php -S localhost:8000 index.php
+    php -S localhost:8000 index.php
 
 The page is now available under `http://localhost:8000`
 and the admin area under `http://localhost:8000/admin`
