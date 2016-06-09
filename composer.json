@@ -1,0 +1,23 @@
+{
+  "name": "happychips/website",
+  "description": "Website CMS for Happy Green Coop",
+  "type": "application",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Nikolas Martens",
+      "email": "Nikolas.M@rtens.org",
+      "homepage": "http://rtens.org"
+    }
+  ],
+  "require": {
+    "rtens/domin": "dev-master",
+    "watoki/curir": "dev-master"
+  },
+  "autoload": {
+    "psr-4": {
+      "happybt\\coop\\": "src/"
+    }
+  },
+  "minimum-stability": "dev"
+}

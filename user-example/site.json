@@ -1,0 +1,8 @@
+{
+    "user": "admin",
+    "password": "admin",
+    "title": "Test Page",
+    "brand": "brand.png",
+    "copyright": "Foo",
+    "contact": "foo@example.com"
+}
