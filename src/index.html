@@ -100,7 +100,13 @@
         <div class="row">
             <div class="col-md-6 col-md-offset-6 col-sm-7 col-sm-offset-5 col-lg-7 col-lg-offset-5">
                 <div class="well">
-                    <h2><a href="<?= $page[url] ?>.html"><?= $page[title] ?></a></h2>
+                    <h2>
+                        <? if ($page[sections]) { ?>
+                            <a href="<?= $page[url] ?>.html"><?= $page[title] ?></a>
+                        <? } else { ?>
+                            <?= $page[title] ?>
+                        <? } ?>
+                    </h2>
 
                     <? if ($page[subtitle]) { ?>
                     <h3><?= $page[subtitle] ?></h3>
@@ -108,7 +114,9 @@
 
                     <?= $page[summary] ?>
 
-                    <a href="<?= $page[url] ?>.html" class="more-link">More</a>
+                    <? if ($page[sections]) { ?>
+                        <a href="<?= $page[url] ?>.html" class="more-link">More</a>
+                    <? } ?>
                 </div>
             </div>
         </div>

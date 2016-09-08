@@ -78,7 +78,8 @@ class IndexResource extends Container {
                 'title' => $page['title'],
                 'subtitle' => $page['subtitle'],
                 'image' => $page['image'],
-                'summary' => $page['summary']
+                'summary' => $page['summary'],
+                'sections' => $page['sections'],
             ];
         }
         return $pages;
@@ -91,8 +92,11 @@ class IndexResource extends Container {
         foreach ($pages as $url) {
             $page = json_decode(file_get_contents($this->dataDir . "pages/$url.json"), true);
 
-            $sections = [];
+            if (!$page['sections']) {
+                continue;
+            }
 
+            $sections = [];
             foreach ($page['sections'] as $section) {
                 $sections[] = [
                     'anchor' => $section['anchor'],
@@ -100,9 +104,7 @@ class IndexResource extends Container {
                 ];
             }
 
-            if ($sections) {
-                $sections[0]['anchor'] = '';
-            }
+            $sections[0]['anchor'] = '';
 
             $items[] = [
                 'url' => $url,
