@@ -100,6 +100,10 @@ class IndexResource extends Container {
                 ];
             }
 
+            if ($sections) {
+                $sections[0]['anchor'] = '';
+            }
+
             $items[] = [
                 'url' => $url,
                 'caption' => $page['menu'],
