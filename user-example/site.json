@@ -2,7 +2,7 @@
     "user": "admin",
     "password": "admin",
     "title": "Test Page",
-    "brand": "brand.png",
+    "brand": null,
     "copyright": "Foo",
     "contact": "foo@example.com"
 }

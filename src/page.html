@@ -50,7 +50,11 @@
                 <span class="icon-bar"></span>
             </button>
             <a class="navbar-brand" href="index.html">
-                <img align="left" alt="<?= $title ?>" src="img/<?= $brand ?>">
+                <? if ($brand) { ?>
+                    <img align="left" alt="<?= $title ?>" src="img/<?= $brand ?>">
+                <? } else { ?>
+                    <?= $title ?>
+                <? } ?>
             </a>
         </div>
 
